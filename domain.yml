@@ -1,0 +1,131 @@
+version: "3.1"
+intents:
+  - greet
+  - deny
+  - mood_great
+  - mood_unhappy
+  - goodbye
+  - affirm
+  - bot_challenge
+  - consult
+  - inform
+  - jaun
+  - typ
+  - mlria
+  - tuber
+  - corona
+  - Hospitals_near_me
+  - Malaria
+  - Cancer
+  - Tuberculosis
+  - Chikungunya
+  - Typhoid
+  - Diabetes
+  - Asthma
+entities:
+  - user_name
+  - user_age
+# slots:
+#   name:
+#     type: text
+#     mappings:
+#       - type: from_entity
+#         entity: name
+#   num_people:
+#     type: any
+#     mappings:
+#       - type: from_entity
+#         entity: age
+# forms:
+#   restaurant_form:
+#     required_slots:
+#       - name
+#       - num_people
+
+# actions:
+#   - validate_restaurant_form
+#   - user_details_form
+#   # - action_store_user_input
+#   # - action_use_user_input
+slots:
+  user_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: user_name
+        # to_slot: user_name
+
+  user_age:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: user_age
+        # to_slot: user_age
+
+forms:
+  simple_checkup_form:
+    required_slots:
+      - user_name
+      - user_age
+actions:
+  - action_ask_for_name
+
+responses:
+  utter_greet:
+    - text: Hey! How are you?
+  # utter_cheer_up:
+  #   - text: "Here is something to cheer you up:"
+  #     image: https://i.imgur.com/nGF1K8f.jpg
+  # utter_did_that_help:
+  #   - text: Did that help you?
+  # utter_happy:
+  #   - text: Great, carry on!
+  utter_goodbye:
+    - text: Bye
+  utter_submit:
+    - text: i will now do checkup
+  utter_iamabot:
+    - text: I am a bot.
+  utter-checkup_slots:
+    - text: I will do a {user_name} {user_age} checkup
+  utter_name:
+    - text: what is your name
+  utter_age:
+    - text: what is your age
+  utter_sym:
+    - text: tell me you symptoms
+  utter_jaun:
+    - text: you have jaundice
+  utter_typ:
+    - text: you have typhoid
+  utter_mlria:
+    - text: you have malaria
+  utter_tuber:
+    - text: you have tuberculosis
+  utter_corona:
+    - text: you have corona disease
+  utter_hospital:
+    - text: Srijan Hospital,Ojha Hospital Multispecialty Hospital in Prayagraj ,Tej Bahadur Sapru Hospital Prayagraj.
+  utter_heart_disease:
+    - text: Cardiovascular diseases (CVDs) are the leading cause of death globally.Heart attacks and strokes are usually acute events and are mainly caused by a blockage that prevents blood from flowing to the heart or brain. The most common reason for this is a build-up of fatty deposits on the inner walls of the blood vessels that supply the heart or brain. Strokes can be caused by bleeding from a blood vessel in the brain or from blood clots.
+  utter_corona_virus_disease:
+    - text: Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.The best way to prevent and slow down transmission is to be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face.
+  utter_malaria:
+    - text: Malaria is a life-threatening disease caused by parasites that are transmitted to people through the bites of infected female Anopheles mosquitoes. It is preventable and curable. There are 5 parasite species that cause malaria in humans, and 2 of these species – Plasmodium falciparum and Plasmodium vivax – pose the greatest threat.
+  utter_cancer:
+    - text: Cancer is a generic term for a large group of diseases that can affect any part of the body. Other terms used are malignant tumours and neoplasms. One defining feature of cancer is the rapid creation of abnormal cells that grow beyond their usual boundaries, and which can then invade adjoining parts of the body and spread to other organs; the latter process is referred to as metastasis. Metastases are  the primary cause of death from cancer.
+  utter_tuberculosis:
+    - text: TB is caused by bacteria (Mycobacterium tuberculosis) and it most often affects the lungs. TB is spread through the air when people with lung TB cough, sneeze or spit. A person needs to inhale only a few germs to become infected.
+  utter_chikungunya:
+    - text: Chikungunya is a mosquito-borne viral disease that causes fever and severe joint pain. The disease was first recognized in 1952 during an outbreak in southern Tanzania. It is a ribonucleic acid (RNA) virus that belongs to the alphavirus genus of the family Togaviridae. The name “chikungunya” derives from a word in the Kimakonde language of southern Tanzania, meaning “to become contorted”, and describes the stooped appearance of sufferers with joint pain (arthralgia).
+  utter_typhoid:
+    - text: Typhoid fever is a life-threatening systemic infection caused by the bacterium Salmonella enterica serovar Typhi (commonly known as Salmonella Typhi). Typhoid is usually spread through the ingestion of contaminated food or water.
+  utter_diabetes:
+    - text: Diabetes is a chronic, metabolic disease characterized by elevated levels of blood glucose (or blood sugar), which leads over time to serious damage to the heart, blood vessels, eyes, kidneys and nerves. The most common is type 2 diabetes, usually in adults, which occurs when the body becomes resistant to insulin or doesn't make enough insulin.
+  utter_asthma:
+    - text: Asthma is a long-term condition affecting children and adults. The air passages in the lungs become narrow due to inflammation and tightening of the muscles around the small airways.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,178 @@
+version: "3.1"
+
+stories:
+  # - story: happy path
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: mood_great
+  #     - action: utter_happy
+  #     # - action: action_text_to_speech
+
+  # - story: sad path 1
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: mood_unhappy
+  #     - action: utter_cheer_up
+  #     - action: utter_did_that_help
+  #     - intent: affirm
+  #     - action: utter_happy
+
+  # - story: sad path 2
+  #   steps:
+  #     - intent: greet
+  #     - action: utter_greet
+  #     - intent: mood_unhappy
+  #     - action: utter_cheer_up
+  #     - action: utter_did_that_help
+  #     - intent: deny
+  #     - action: utter_goodbye
+  # - story: User provides input
+  #   steps:
+  #     - intent: consult
+  #     - action: action_ask_for_name
+  - story: Ask for user's details
+    steps:
+      - intent: greet
+      - action: action_ask_for_name
+      - intent: inform
+        entities:
+          - user_name: "John" # Provide a sample name
+      - action: action_ask_for_name
+      - intent: inform
+        entities:
+          - user_age: "25"
+
+    # - story: Collect user details
+    #   steps:
+    #     - intent: greet
+    #     - action: user_details_form
+  - story: cc
+    steps:
+      - intent: consult
+      - action: utter_sym
+      - action: restart_convo
+  - story: jj
+    steps:
+      - intent: jaun
+      - action: utter_jaun
+      - action: restart_convo
+
+  - story: tt
+    steps:
+      - intent: typ
+      - action: utter_typ
+      - action: restart_convo
+
+  -  story: ml
+    steps:
+      - intent: mlria
+      - action: utter_mlria
+      - action: restart_convo
+      
+  -  story: tb
+      steps:
+        - intent: tuber
+        - action: utter_tuber
+        - action: restart_convo
+  -  story: cr
+      steps:
+        - intent: corona
+        - action: utter_corona
+        - action: restart_convo
+
+        
+  -  story: hs
+      steps:
+        - intent: Hospitals_near_me
+        - action: utter_hospital
+        - action: restart_convo
+  - story: DISEASE INFO MALARIA
+      steps:
+        - intent: Disease_info
+        - action: utter_disease_info1
+        - intent: Malaria
+        - action: utter_malaria
+        - action: utter_did_that_help
+        - intent: affirm
+        - action: utter_happy
+
+- story: DISEASE INFO CANCER
+      steps:
+        - intent: Disease_info
+        - action: utter_disease_info1
+        - intent: Cancer
+        - action: utter_cancer
+        - action: utter_did_that_help
+        - intent: affirm
+        - action: utter_happy
+
+- story: DISEASE INFO TUBERCULOSIS
+      steps:
+        - intent: Disease_info
+        - action: utter_disease_info1
+        - intent: Tuberculosis
+        - action: utter_tuberculosis
+        - action: utter_did_that_help
+        - intent: affirm
+        - action: utter_happy
+
+- story: DISEASE INFO CHIKUNGUNYA
+        steps:
+          - intent: Disease_info
+          - action: utter_disease_info1
+          - intent: Chikungunya
+          - action: utter_chikungunya
+          - action: utter_did_that_help
+          - intent: affirm
+          - action: utter_happy
+
+- story: DISEASE INFO TYPHOID
+        steps:
+          - intent: Disease_info
+          - action: utter_disease_info1
+          - intent: Typhoid
+          - action: utter_typhoid
+          - action: utter_did_that_help
+          - intent: affirm
+          - action: utter_happy
+
+- story: DISEASE INFO DIABETES
+        steps:
+          - intent: Disease_info
+          - action: utter_disease_info1
+          - intent: Diabetes
+          - action: utter_diabetes
+          - action: utter_did_that_help
+          - intent: affirm
+          - action: utter_happy
+
+- story: DISEASE INFO ASTHMA
+        steps:
+          - intent: Disease_info
+          - action: utter_disease_info1
+          - intent: Asthma
+          - action: utter_asthma
+          - action: utter_did_that_help
+          - intent: affirm
+          - action: utter_happy
+- story: DISEASE SYMPTOMS HEART
+        steps:
+          - intent: Disease_Symptoms
+          - action: utter_disease_symptoms1
+          - intent: Heart_Disease_Symp
+          - action: utter_heart_disease_symp
+          - action: utter_did_that_help
+          - intent: affirm
+          - action: utter_happy
+
+- story: DISEASE SYMPTOMS CORONA
+        steps:
+          - intent: Disease_Symptoms
+          - action: utter_disease_symptoms1
+          - intent: Corona_Virus_Disease_Symptoms
+          - action: utter_corona_virus_disease_symptoms
+          - action: utter_did_that_help
+          - intent: affirm
+          - action: utter_happy

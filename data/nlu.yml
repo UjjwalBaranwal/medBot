@@ -1,0 +1,251 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hey 
+      - hey my name is
+      - hello
+      - hellow
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - Hii
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: consult
+    examples: |
+      - i want to consult
+      - i want to do checkup
+      - do checkup
+      - i want to have a medical check-up
+      - i would like to check my health
+      - Symptom checker
+      - can you check my symptoms
+      - what am i suffering from
+      - find out what disease am i having
+      - i am not feeling good
+      - i am sick
+      - what disease i must be having?
+      - why am i facing these symptoms?
+      - how do i know i have this disease?
+  # nlu:
+  - intent: inform
+    examples: |
+      - My name is [John](user_name)
+      - I'm [Sarah](user_name)
+      - [Alex](user_name) is my name
+      - I am [25](user_age) years old
+      - [30](user_age) years is my age
+      - I'm [18](user_age)
+  - intent: jaun
+    examples: |
+      - i am having Yellowing of the Skin and Eyes
+      - Dark Urine,pale stools,Itchy Skin,Fatigue and Weakness,Abdominal Pain
+      - I've noticed my skin and eyes turning yellow, and my urine is really dark. I'm also feeling itchy all over.
+      - My stools have become pale, and I'm experiencing fatigue and weakness. Is this something I should be concerned about?
+      - There's a yellowish tint to my skin, and I've been having abdominal pain along with dark urine. What could be the cause of these symptoms?
+      - I'm concerned because I have jaundice symptoms like yellow eyes and dark urine. Additionally, I've been feeling unusually tired and itchy.
+  - intent: typ
+    examples: |
+      - i am having fever,Headache,Abdominal Pain,Weakness and Fatigue,Poor Appetite,Rash,Diarrhea or Constipation,cough,Enlarged Spleen and Liver,chills and sweating
+      - I've noticed fever,Headache,Abdominal Pain,Weakness and Fatigue,Poor Appetite,Rash,Diarrhea or Constipation,cough,Enlarged Spleen and Liver,chills and sweating
+      - fever,Headache,Abdominal Pain,Weakness and Fatigue,Poor Appetite,Rash,Diarrhea or Constipation,cough,Enlarged Spleen and Liver,chills and sweating
+      - i am suffering from fever,Headache,Abdominal Pain,Weakness and Fatigue,Poor Appetite,Rash,Diarrhea or Constipation,cough,Enlarged Spleen and Liver,chills and sweating
+      - there  is fever,Headache,Abdominal Pain,Weakness and Fatigue,Poor Appetite,Rash,Diarrhea or Constipation,cough,Enlarged Spleen and Liver,chills and sweating
+      - my symptoms are fever,Headache,Abdominal Pain,Weakness and Fatigue,Poor Appetite,Rash,Diarrhea or Constipation,cough,Enlarged Spleen and Liver,chills and sweating
+  - intent: mlria
+    exapmles: |
+      - Fever,Chills and Sweating,Weakness and Fatigue,Muscle and Joint Pain,Headache,Nausea and Vomiting,Anemia,Enlarged Spleen,Diarrhea
+      - i am having Fever,Chills and Sweating,Weakness and Fatigue,Muscle and Joint Pain,Headache,Nausea and Vomiting,Anemia,Enlarged Spleen,Diarrhea
+      - my symptoms are Fever,Chills and Sweating,Weakness and Fatigue,Muscle and Joint Pain,Headache,Nausea and Vomiting,Anemia,Enlarged Spleen,Diarrhea
+      - symptoms are  Fever,Chills and Sweating,Weakness and Fatigue,Muscle and Joint Pain,Headache,Nausea and Vomiting,Anemia,Enlarged Spleen,Diarrhea
+      - i am suffering from Fever,Chills and Sweating,Weakness and Fatigue,Muscle and Joint Pain,Headache,Nausea and Vomiting,Anemia,Enlarged Spleen,Diarrhea
+  - intent: tuber
+    examples: |
+      - Cough,Fever,Night Sweats,Weight Loss,Fatigue,Chest Pain,Shortness of Breath,Chills,Swollen Lymph Nodes,Hemoptysis
+      - i am facing Cough,Fever,Night Sweats,Weight Loss,Fatigue,Chest Pain,Shortness of Breath,Chills,Swollen Lymph Nodes,Hemoptysis
+      - my symptoms are Cough,Fever,Night Sweats,Weight Loss,Fatigue,Chest Pain,Shortness of Breath,Chills,Swollen Lymph Nodes,Hemoptysis
+      - symptoms Cough,Fever,Night Sweats,Weight Loss,Fatigue,Chest Pain,Shortness of Breath,Chills,Swollen Lymph Nodes,Hemoptysis
+      - i am suffering from Cough,Fever,Night Sweats,Weight Loss,Fatigue,Chest Pain,Shortness of Breath,Chills,Swollen Lymph Nodes,Hemoptysis
+      - feeling Cough,Fever,Night Sweats,Weight Loss,Fatigue,Chest Pain,Shortness of Breath,Chills,Swollen Lymph Nodes,Hemoptysis
+  - intent: corona
+    examples: |
+      - Fever,Cough,Shortness of Breath,Fatigue,Muscle or Body Aches,Headache,Loss of Taste or Smell,Sore Throat,Chills,Congestion or Runny Nose,Nausea or Vomiting,Diarrhea
+      - i am feeling Fever,Cough,Shortness of Breath,Fatigue,Muscle or Body Aches,Headache,Loss of Taste or Smell,Sore Throat,Chills,Congestion or Runny Nose,Nausea or Vomiting,Diarrhea
+      - suffering Fever,Cough,Shortness of Breath,Fatigue,Muscle or Body Aches,Headache,Loss of Taste or Smell,Sore Throat,Chills,Congestion or Runny Nose,Nausea or Vomiting,Diarrhea
+      - feeling Fever,Cough,Shortness of Breath,Fatigue,Muscle or Body Aches,Headache,Loss of Taste or Smell,Sore Throat,Chills,Congestion or Runny Nose,Nausea or Vomiting,Diarrhea
+      - facing Fever,Cough,Shortness of Breath,Fatigue,Muscle or Body Aches,Headache,Loss of Taste or Smell,Sore Throat,Chills,Congestion or Runny Nose,Nausea or Vomiting,Diarrhea
+      - symptoms Fever,Cough,Shortness of Breath,Fatigue,Muscle or Body Aches,Headache,Loss of Taste or Smell,Sore Throat,Chills,Congestion or Runny Nose,Nausea or Vomiting,Diarrhea
+  - intent: Hospitals_near_me
+    examples: |
+      - list the Hospitals near me
+      - hospital located in my region
+      - what are the hospitals residing in my area
+      - give hospitals present near my vicinity
+      - nearest nursing home
+      - give me address of nearby hospital
+      - what is the nearest hospital near me
+      - help me get to the nearest hospital
+      - how many hospitals present in my locality
+      - all hospitals in my region
+      - find me a nearby hospital
+      - list some hospitals near by
+      - tell me the hospitals which are near my locality
+      - can i get the names and address of the hospitals near by me
+      - can i have some info of the hospitals near by me
+      - i want to have the details of the hospitals near by me
+      - can you provide the details of the hospitals like address name and phone number ,which are near by me
+  - intent: Heart_Disease
+    examples: |
+      - more info about heart disease
+      - something more about heartdiease
+      - need info about cardiovascular diseases
+      - give information about heard diseases
+      - what is heart disease exactly?
+      - elaborate heart disease for me
+      - why does cardiac arrest occur?
+
+  - intent: Corona_Virus_Disease
+    examples: |
+      - corona virus disease
+      - Novel corona virus info
+      - COVID
+      - what is corona virus
+      - want to know more about corona disease
+      - give information about corona
+      - what is covid-19?
+      - why is corona is dangerous?
+
+  - intent: Malaria
+    examples: |
+      - what is malaria
+      - Malaria disease info
+      - information about malaria disease
+      - tell me more about malaria
+      - show information about malaria
+      - need to know about malaria
+
+  - intent: Cancer
+    examples: |
+      - cancer info
+      - disease information of Cancer
+      - provide information about cancer
+      - i want to learn more about cancer
+      - tell me about cancer disease
+
+  - intent: Tuberculosis
+    examples: |
+      - information about tuberculosis disease
+      - what is Tuberculosis?
+      - tell me more about tuberculosis
+      - provide information about tuberculosis
+      - i want to learn more about tuberculosis
+      - TB
+      - What is TB?
+
+  - intent: Chikungunya
+    examples: |
+      - chikungunya disease info
+      - give information about Chikungunya disease
+      - provide information about chikungunya
+      - i want to learn more about chikungunya
+      - what is chikungunya disease
+
+  - intent: Typhoid
+    examples: |
+      - typhoid disease information
+      - tell me something about Typhoid disease
+      - provide information about typhoid
+      - i want to learn more about typhoid
+      - something more about typhoid disease
+
+  - intent: Asthma
+    examples: |
+      - asthma
+      - Asthma
+      - how is asthma caused
+      - tell me something about asthma
+      - show me information about the asthma
+      - is asthma a matter of concern
+
+  - intent: Diabetes
+    examples: |
+      - diabetes
+      - Diabetes
+      - provide information about Diabetes
+      - can you tell me something on diabetes
+      - do you know anything about Diabetes
